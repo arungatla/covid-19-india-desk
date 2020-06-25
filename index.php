@@ -76,7 +76,7 @@
       <div class="flex mt-3 justify-center">
         <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex" style="width: 70px;"></div>
       </div>
-      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest mt-3" style="color: white;">LAST UPDATE ON</p>
+      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest mt-3  font-medium" style="color: white;">LAST UPDATE ON</p>
       <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white"><?php echo $lastupdate ?></p>
     </div>
     <div class="flex flex-wrap -m-4 text-center">
