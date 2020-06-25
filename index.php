@@ -66,38 +66,52 @@
 <section class="text-gray-500 bg-gray-900 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white tracking-widest">India Desk</h1>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white tracking-widest"><span class="" style="color:#FF9933;">I</span><span class="" style="color:#FF9933;">N</span><span class="" style="color:#F7FAFC">D</span><span class="" style="color:#138808;">I</span><span class="" style="color:#138808;">A</span>
+      Desk</h1>
       <p class=" mx-auto leading-relaxed text-base tracking-widest">Stay Home,Stay away from Covid-19.</p>
       <div></div>
       <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white;">LAST UPDATE ON</p>
-      <p class=" text-center mx-auto leading-relaxed text-base" style="color: white;"><?php echo $lastupdate ?></p>
+      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white"><?php echo $lastupdate ?></p>
     </div>
     <div class="flex flex-wrap -m-4 text-center">
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          
+        <i class="fas fa-check-circle" style="color:#4299E1;"></i>
           <h2 class="title-font font-medium text-3xl text-white "><?php echo $active_cases ?></h2>
           <p class="leading-relaxed tracking-widest" style="color:#4299E1;">ACTIVE</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $confirmed_cases ?></h2>
+        <i class="fas fa-check-circle" style="color:#E53E3E;"></i>
+          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $confirmed_cases ?>
+          <span class="text-xs leading-relaxed text-base" style="color:#E53E3E;">
+          +<?php echo $days_count['dailyconfirmed'] ?>
+          </span>
+        </h2>
           <p class="leading-relaxed tracking-widest" style="color:#E53E3E;">CONFIRMED</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
-          
-          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $recovered_cases ?></h2>
+        <i class="fas fa-check-circle" style="color:#48BB78"></i>
+          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $recovered_cases ?>
+            <span class="text-xs leading-relaxed text-base" style="color:#48BB78;">
+            +<?php echo $days_count['dailyrecovered'] ?>
+          </span>
+        </h2>
           <p class="leading-relaxed tracking-widest" style="color:#48BB78;">RECOVERED</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+        <i class="fas fa-check-circle" style="color:#A0AEC0"></i> 
+          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $deceased_cases ?>
+          <span class="text-xs leading-relaxed text-base" style="color:#A0AEC0;">
+            +<?php echo $days_count['dailydeceased'] ?>
+          </span>
+        </h2>
           
-          <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $deceased_cases ?></h2>
-          <!-- <p class="leading-relaxed"><?php ?></p> -->
           
           <p class="leading-relaxed tracking-widest" style="color:#A0AEC0;">DECEASED</p>
         </div>
@@ -116,20 +130,20 @@
 <section class="text-gray-500 bg-gray-900 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">STATE WISE CHART</h1>
+      <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white tracking-widest">STATE WISE CHART</h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
     </div>
-    <div class=" w-full mx-auto overflow-auto container-fluid">
-      <table class="table-auto w-full text-left whitespace-no-wrap">
+    <div class=" w-full mx-auto overflow-auto container-fluid ">
+      <table class="table-auto w-full text-left whitespace-no-wrap lg:border border-gray-700">
         <thead>
           <tr>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">STATE</th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">CONFIRMED
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-800 rounded-tl rounded-bl tracking-widest">STATE</th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-800 tracking-widest">CONFIRMED
             
             </th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">ACTIVE</th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">RECOVERED</th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">DEATHS</th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-800 tracking-widest">ACTIVE</th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-800 tracking-widest">RECOVERED</th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-lg bg-gray-800 rounded-tr rounded-br tracking-widest" >DEATHS</th>
           </tr>
         </thead>
         <tbody>
@@ -142,11 +156,11 @@
                     
             ?>
                 <tr>
-                    <td class="border-t-2 border-gray-800 px-5 py-3 text-lg text-white" id="<?php echo $value['state']?>"><?php echo $value['state'] ?></td>
-                    <td class="border-t-2 border-gray-800 px-5 py-3 text-lg text-white"><?php echo $value['confirmed'] ?></td>
-                    <td class="border-t-2 border-gray-800 px-5 py-3 text-lg text-white"><?php echo $value['active']?></td>
-                    <td class="border-t-2 border-gray-800 px-5 py-3 text-lg text-white"><?php echo $value['recovered']?></td>
-                    <td class="border-t-2 border-gray-800 px-5 py-3 text-lg text-white"><?php echo $value['deaths']?></td>
+                    <td class="border-t-2 border-gray-800 px-5 py-3 text-medium text-white"><?php echo $value['state']?></td>
+                    <td class="border-t-2 border-gray-800 px-5 py-3 text-medium text-white"><?php echo $value['confirmed'] ?></td>
+                    <td class="border-t-2 border-gray-800 px-5 py-3 text-medium text-white"><?php echo $value['active']?></td>
+                    <td class="border-t-2 border-gray-800 px-5 py-3 text-medium text-white"><?php echo $value['recovered']?></td>
+                    <td class="border-t-2 border-gray-800 px-5 py-3 text-medium text-white"><?php echo $value['deaths']?></td>
                 </tr>
             <?php }?>
         </tbody>

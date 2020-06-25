@@ -11,7 +11,24 @@
 
     // print_r($data)
 
-    $days_count_prev=count($data['statewise'])-1;
+    $days_count_prev=count($data['cases_time_series'])-1;
     $days_count=$data['cases_time_series'][$days_count_prev];
-    // echo $days_count['date'];
+    // print_r($days_count);
+    $confirmed_prev=-($data["statewise"][0]['confirmed']-$days_count['totalconfirmed']);
+    $recovered_prev=-($data["statewise"][0]['recovered']-$days_count['totalrecovered']);
+    $deaths_prev=-($data["statewise"][0]['deaths']-$days_count['totaldeceased']);
+
+    // echo $confirmed_cases,"<br>";
+    // echo $recovered_cases,"<br>";
+    // echo $deceased_cases,"<br>";
+    // echo $days_count['totalconfirmed'],"<br>";
+    // echo $days_count['totalrecovered'],"<br>";
+    // echo $days_count['totaldeceased'],"<br>";
+    // echo $confirmed_prev,"<br>";
+    // echo $recovered_prev,"<br>";
+    // echo $deaths_prev,"<br>";
+    // echo $active_cases,"<br>";
+    
+    
+    
 ?>
