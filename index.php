@@ -43,6 +43,9 @@
     <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
     <a href="#"><img src="virusw24.png" alt="virus"></a>
       <span class="ml-3 text-xl text-gray-200 tracking-widest">Covid-19 Desk India</span>
+      <!-- <div class="flex mt-6 justify-center"> -->
+        <!-- <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div> -->
+      <!-- </div> -->
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <!-- <a href="#confirmed" class="mr-5 hover:text-white">CONFIRMED</a>
@@ -70,11 +73,14 @@
       Desk</h1>
       <p class=" mx-auto leading-relaxed text-base tracking-widest">Stay Home,Stay away from Covid-19.</p>
       <div></div>
-      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white;">LAST UPDATE ON</p>
+      <div class="flex mt-3 justify-center">
+        <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex" style="width: 70px;"></div>
+      </div>
+      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest mt-3" style="color: white;">LAST UPDATE ON</p>
       <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white"><?php echo $lastupdate ?></p>
     </div>
     <div class="flex flex-wrap -m-4 text-center">
-      <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
         <i class="fas fa-check-circle" style="color:#4299E1;"></i>
           <h2 class="title-font font-medium text-3xl text-white "><?php echo $active_cases ?></h2>
