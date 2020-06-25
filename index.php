@@ -42,13 +42,13 @@
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
     <a href="#"><img src="virusw24.png" alt="virus"></a>
-      <span class="ml-3 text-xl text-gray-200">Covid-19 Desk India</span>
+      <span class="ml-3 text-xl text-gray-200 tracking-widest">Covid-19 Desk India</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a href="#confirmed" class="mr-5 hover:text-white">CONFIRMED</a>
+      <!-- <a href="#confirmed" class="mr-5 hover:text-white">CONFIRMED</a>
       <a href="#active" class="mr-5 hover:text-white">ACTIVE</a>
       <a href="#recovered" class="mr-5 hover:text-white">RECOVERED</a>
-      <a href="#deceased" class="mr-5 hover:text-white">DECEASED</a>
+      <a href="#deceased" class="mr-5 hover:text-white">DECEASED</a> -->
     </nav>
     <a href="https://github.com/arungatla"  target="_blank" rel="noopener noreferrer">
     <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Github  
@@ -66,10 +66,10 @@
 <section class="text-gray-500 bg-gray-900 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">India Desk</h1>
-      <p class=" mx-auto leading-relaxed text-base">Stay Home,Stay away from Covid-19.</p>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white tracking-widest">India Desk</h1>
+      <p class=" mx-auto leading-relaxed text-base tracking-widest">Stay Home,Stay away from Covid-19.</p>
       <div></div>
-      <p class=" text-center mx-auto leading-relaxed text-base" style="color: white;">LAST UPDATE ON</p>
+      <p class=" text-center mx-auto leading-relaxed text-base tracking-widest" style="color: white;">LAST UPDATE ON</p>
       <p class=" text-center mx-auto leading-relaxed text-base" style="color: white;"><?php echo $lastupdate ?></p>
     </div>
     <div class="flex flex-wrap -m-4 text-center">
@@ -77,28 +77,29 @@
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
           
           <h2 class="title-font font-medium text-3xl text-white "><?php echo $active_cases ?></h2>
-          <p class="leading-relaxed" style="color:#F6E05E;">ACTIVE</p>
+          <p class="leading-relaxed tracking-widest" style="color:#4299E1;">ACTIVE</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
           <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $confirmed_cases ?></h2>
-          <p class="leading-relaxed" style="color:white;">CONFIRMED</p>
+          <p class="leading-relaxed tracking-widest" style="color:#E53E3E;">CONFIRMED</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
           
           <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $recovered_cases ?></h2>
-          <p class="leading-relaxed" style="color:#48BB78;">RECOVERED</p>
+          <p class="leading-relaxed tracking-widest" style="color:#48BB78;">RECOVERED</p>
         </div>
       </div>
       <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
         <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
           
           <h2 class="title-font font-medium text-3xl text-white" style="color:#E53E3E;"><?php echo $deceased_cases ?></h2>
-          <p class="leading-relaxed"><?php ?></p>
-          <p class="leading-relaxed" style="color:#E53E3E;">DECEASED</p>
+          <!-- <p class="leading-relaxed"><?php ?></p> -->
+          
+          <p class="leading-relaxed tracking-widest" style="color:#A0AEC0;">DECEASED</p>
         </div>
       </div>
     </div>
@@ -109,25 +110,6 @@
 
 <!-- state wise news in carousel -->
 
-
-<div id="carouselExampleSlidesOnly" class="container carousel slide text-gray-400 justify-center bg-gray-900 body-font " data-ride="carousel">
-    <div class="carousel-inner border-2 border-gray-800 py-8 rounded-lg" style="width:60%;margin:auto;">
-        <?php
-            foreach($data['statewise'] as $key => $value){
-                if ($key==0){
-                    continue;
-                }
-                
-                
-                ?>
-            <div class="carousel-item active text-center">
-                <p src="" class="d-block w-100"><?php echo $value['statenotes']?></p>
-            </div>
-            
-        <?php } ?>
-
-    </div>
-</div>
 
 <!-- Table creating and validating the data -->
 
@@ -142,11 +124,12 @@
         <thead>
           <tr>
             <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">STATE</th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">CONFIRMED</th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">CONFIRMED
+            
+            </th>
             <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">ACTIVE</th>
             <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">RECOVERED</th>
-            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">DEATHS</th>
-            <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br"></th>
+            <th class="px-5 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br">DEATHS</th>
           </tr>
         </thead>
         <tbody>
@@ -170,13 +153,9 @@
       </table>
     </div>
     <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <a class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </a>
-      <button class="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">Button</button>
-    </div>
+      <a class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0" style="margin:auto;" href="#top">Back To Top
+      <i class="fas fa-chevron-circle-up ml-2"></i>
+      </a>    </div>
   </div>
 </section>
 <!-- footer -->
